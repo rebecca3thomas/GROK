@@ -35,7 +35,7 @@ header {
   text-align: center; }
 .home .header_right {
   float: right;
-  width: 20%; }
+  width: 19%; }
   .home .header_right a {
     margin: 3px 3px 0 0;
     display: block;
@@ -44,7 +44,8 @@ header {
     text-align: center;
     text-decoration: none;
     color: #6975ff;
-    padding: 15px; }
+    padding: 15px;
+    font-family: "Avenir"; }
     @media screen and (min-width: 690px) {
       .home .header_right a:hover {
         color: white;
@@ -66,6 +67,10 @@ header {
     color: white;
     font-family: "Avenir";
     padding-right: 50px; }
+    @media screen and (min-width: 690px) {
+      .main_nav_container a:hover {
+        color: #494848;
+        font-weight: lighter; } }
 
 .content_wrapper {
   margin: 0 auto; }
@@ -79,59 +84,55 @@ header {
 
 .info {
   width: 90%;
-  margin: 0 auto; }
-
-.info_right_align {
-  width: 95%;
-  margin: 0 auto; }
-  .info_right_align section {
-    width: 80%;
-    margin: 0 auto; }
-  .info_right_align .img_container {
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 10px; }
-  .info_right_align img {
-    width: 100%;
-    margin: 0 auto; }
-
-.signup {
-  width: 70%;
   margin: 0 auto;
-  text-align: center; }
-  .signup form {
-    width: 90%;
-    margin: 0 auto; }
-  .signup input {
-    width: 100%;
-    padding: 2% 0; }
-
-#submit_button {
-  -webkit-appearance: none;
-  margin-top: 15px;
-  padding: 4% 0;
-  background: none;
-  border: 2px solid #6975ff;
-  border-radius: 5px;
-  color: #6975ff;
-  font-family: "Avenir";
-  font-size: 1em; }
-
-@media screen and (min-width: 690px) {
+  margin-top: 10px; }
   .info:after {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (min-width: 690px) {
+    .info .info_text {
+      float: left;
+      width: 60%; } }
+  .info .info_right_align {
+    width: 95%;
+    margin: 0 auto; }
+    .info .info_right_align section {
+      width: 80%;
+      margin: 0 auto; }
+    .info .info_right_align .img_container {
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 10px; }
+    .info .info_right_align img {
+      width: 100%;
+      margin: 0 auto; }
+    @media screen and (min-width: 690px) {
+      .info .info_right_align {
+        float: right;
+        width: 30%;
+        background: #494848; } }
+  .info .signup {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center; }
+    .info .signup form {
+      width: 90%;
+      margin: 0 auto; }
+    .info .signup input {
+      width: 100%;
+      padding: 2% 0; }
+  .info #submit_button {
+    -webkit-appearance: none;
+    margin-top: 15px;
+    padding: 4% 0;
+    background: none;
+    border: 2px solid #6975ff;
+    border-radius: 5px;
+    color: #6975ff;
+    font-family: "Avenir";
+    font-size: 1em; }
 
-  .info_text {
-    float: left;
-    width: 45%; }
-
-  .info_right_align {
-    background: #494848;
-    float: right;
-    width: 50%;
-    padding-top: 50px; } }
 .blue_bg {
   background: #6975ff;
   width: 100%; }
@@ -203,6 +204,10 @@ header {
   margin-top: 5%;
   margin-bottom: 5%;
   padding-bottom: 5%; }
+  .special_performance:after {
+    content: "";
+    display: table;
+    clear: both; }
   .special_performance h1 {
     width: 90%;
     margin: 0 auto; }
@@ -214,6 +219,12 @@ header {
     margin: 0 auto; }
     .special_performance .img_container img {
       width: 100%; }
+    @media screen and (min-width: 690px) {
+      .special_performance .img_container {
+        float: left;
+        width: 20%;
+        padding-left: 7%;
+        margin-top: 10px; } }
   .special_performance h4, .special_performance h5 {
     font-family: "Goudy Old Style";
     color: #fff98e;
@@ -224,32 +235,31 @@ header {
       text-decoration: none;
       color: #fff98e;
       font-size: 1.1em; }
-  .special_performance h4 {
-    margin-top: 8%;
-    font-size: 1.2em;
-    margin-bottom: 1%; }
-  .special_performance p {
-    font-size: .9em;
-    margin-top: 2%; }
-  .special_performance:after {
-    content: "";
-    display: table;
-    clear: both; }
-  @media screen and (min-width: 690px) {
-    .special_performance .img_container {
-      float: left;
-      width: 25%;
-      padding-left: 5%;
-      margin-top: 10px; }
-    .special_performance .moldover_about {
-      float: right;
-      width: 70%; }
-      .special_performance .moldover_about h4, .special_performance .moldover_about h5 {
+    @media screen and (min-width: 690px) {
+      .special_performance h4, .special_performance h5 {
         text-align: left;
-        margin-left: 5%; }
-        .special_performance .moldover_about h4 h4, .special_performance .moldover_about h5 h4 {
-          margin-top: 3%; } }
+        width: 90%;
+        margin: 0 auto; }
+        .special_performance h4 h4, .special_performance h5 h4 {
+          margin-top: 10px; } }
 
+h4 {
+  margin-top: 8%;
+  font-size: 1.2em;
+  margin-bottom: 1%; }
+  @media screen and (min-width: 690px) {
+    h4 {
+      margin-top: 10px; } }
+
+p {
+  font-size: .9em;
+  margin-top: 2%; }
+
+@media screen and (min-width: 690px) {
+  .moldover_about {
+    float: right;
+    width: 70%;
+    margin-top: 10px; } }
 .schedule_home {
   width: 90%;
   margin: 0 auto; }
@@ -276,7 +286,7 @@ header {
       margin: 0 auto; }
     @media screen and (min-width: 690px) {
       .schedule_home .schedule_button {
-        width: 25%; }
+        width: 20%; }
         .schedule_home .schedule_button a:hover {
           color: white;
           background: #6975ff;
@@ -284,7 +294,6 @@ header {
 
 .lt_gray_bg {
   background: #494848;
-  padding: 1%;
   margin-top: 5%;
   width: 100%; }
 
@@ -295,7 +304,11 @@ header {
 .location .location_content_container {
   width: 90%;
   margin: 0 auto; }
-.location .lists {
+  .location .location_content_container:after {
+    content: "";
+    display: table;
+    clear: both; }
+.location .location_content {
   width: 45%;
   margin: 0 auto;
   float: left; }
@@ -308,9 +321,14 @@ header {
     color: white; }
 .location .img_container {
   float: right;
-  width: 50%; }
+  width: 50%;
+  padding: 10px 0; }
   .location .img_container img {
-    width: 100%; }
+    width: 100%;
+    margin-top: 10px; }
+  @media screen and (min-width: 690px) {
+    .location .img_container {
+      width: 35%; } }
 
 .register_now {
   width: 90%;
@@ -321,7 +339,7 @@ header {
     margin-top: 3%; }
     @media screen and (min-width: 690px) {
       .register_now .button {
-        width: 25%; } }
+        width: 20%; } }
     .register_now .button a {
       display: block;
       border: 2px solid #6975ff;
@@ -356,6 +374,9 @@ header {
     margin: 0 auto; }
     .sponsors_left .img_container img {
       width: 100%; }
+    @media screen and (min-width: 690px) {
+      .sponsors_left .img_container {
+        width: 75%; } }
 
 .sponsors_right {
   width: 45%;
@@ -367,6 +388,9 @@ header {
     margin: 0 auto; }
     .sponsors_right .img_container img {
       width: 100%; }
+    @media screen and (min-width: 690px) {
+      .sponsors_right .img_container {
+        width: 75%; } }
     .sponsors_right .img_container #girlsofcode_logo {
       width: 60%;
       margin: 0 20%; }
@@ -391,9 +415,12 @@ header {
   clear: both; }
 .presentation h1 {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 10px; }
 .presentation .img_container {
-  width: 49%;
+  width: 40%;
+  margin: 0 auto;
+  margin-left: 5%;
   vertical-align: middle;
   display: inline-block; }
   .presentation .img_container a {
@@ -415,16 +442,15 @@ footer {
     display: table;
     clear: both; }
   footer .footer_content {
-    width: 90%;
+    width: 95%;
     margin: 0 auto; }
   footer .footer_logo {
     float: left;
-    width: 10%;
-    margin-left: 3%; }
+    width: 7%; }
     footer .footer_logo a {
       display: block; }
     footer .footer_logo img {
-      width: 80%; }
+      width: 70%; }
   footer .right_align:after {
     content: "";
     display: table;
