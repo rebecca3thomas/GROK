@@ -38,40 +38,37 @@ header{
   background: url(../img/headerbg.png) no-repeat 0 0;
   background-size: cover;
   @include breakpoint($large){
-    background:max-height 500px;
     margin:0;
     padding:20px;
   }
- 
 }
 
-.top_of_header{
-  margin:0 auto;
-  padding:10px;
-  // padding-top:10px;
-  @include clearfix;
-  width: 90%;
+.home{
+  @include clearfix;  
 
-  .event_date{
-    float:left;
+  .header_left{
     width: 25%;
+    float: left;
 
-    p{
-      color:white;
-      margin:0;
-      padding:0;
-      font-size: .8em;
-      text-align: center;
+    img{
+      width: 100%;
     }
-   
   }
 
-  .top_register_button{
-    float:right;
+  p{
+      color:#c1c1c1;
+      margin:0;
+      padding:0;
+      font-size: .7em;
+      text-align: center;
+  }
+
+  .header_right{
+    float: right;
     width: 20%;
 
     a{
-      width: 80%;
+      margin: 3px 3px 0 0;
       display: block;
       border: 2px solid $blue;
       border-radius:10px;
@@ -81,71 +78,47 @@ header{
       padding:15px;
 
       @include breakpoint($large){
-         &:hover{
+        &:hover{
           color:white;
+          background:$blue;
+          border-radius:10px;
         }
       }
     }
-
-    @include breakpoint($large){
-      &:hover{
-        background: $blue;
-        border-radius:10px;
-      }
-    }
-  }
-
-}
-
-.home_logo{
-  
-  width: 40%;
-  margin:0 auto;
-  padding:0;
-  text-align: center;
-
-  a{
-    display: block;
-  }
-
-
-  img{
-    width: 100%;
   }
 }
 
-.header_text{
-  font-size: .8em;
-  color:white;
-  text-align: center;
+.main_nav_container{
+  clear: both;
+  background: $blue;
+  text-align: right;
+  width: 100%;
+  padding: 10px 0;
 
-  h2{
-    font-weight: 500;
+  @include breakpoint($large){
+    padding:20px 0;
   }
 
+
   a{
-    display: block;
-    text-decoration:none;
+    display: inline-block;
+    text-decoration: none;
     color:white;
-    margin: 0 auto;
-    padding:0;
-    padding-bottom: 10px;
+    font-family: $aFont;
+    padding-right:50px;
 
-    @include breakpoint($large){
-      &:hover{
-        text-decoration: underline;
-      }
-    }
   }
 }
+
 
 .content_wrapper{
+
   margin: 0 auto;
 
   h1{
     color: $blue;
     font-family: $hFont;
-    text-align: center;
+    text-align: left;
     font-size: 1.5em;
   }
 
@@ -180,6 +153,7 @@ header{
     margin: 0 auto;
   }
 }
+
 .signup{
   width: 70%;
   margin: 0 auto;
@@ -208,6 +182,24 @@ header{
   
 }
 
+@include breakpoint($large){
+  .info{
+    @include clearfix;
+  }
+
+  .info_text{
+    float: left;
+    width: 45%;
+  }
+
+  .info_right_align{
+    background: $ltgraybg;
+    float: right;
+    width: 50%;
+    padding-top:50px;
+  }
+}
+
 .blue_bg{
   background:$blue;
   width: 100%;
@@ -219,25 +211,32 @@ header{
   margin-bottom:5%;
   padding-bottom:5%;
 
+  h1{
+    width: 90%; 
+    margin: 5px auto;
+
+  }
+
   p{
     width: 90%;
     margin: 0 auto;
   }
 }
 
+
 .speakers{
   width: 90%;
   margin: 0 auto;
 
   .img_container{
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
     margin-bottom:5%;
 
     img{
       width: 100%;
-    }
-  }
+     }
+   }
 
   h4, h5{
     font-family: $hFont;
@@ -245,7 +244,6 @@ header{
     padding:0;
     margin: 0 auto;
     text-align: center;
-   
 
     a{
       text-decoration: none;
@@ -254,10 +252,13 @@ header{
     }
   }
 
+  h5{
+    padding-bottom:10px;
+  }
   h4{
-    margin-top:8%;
+    margin-top:5%;
     font-size: 1.2em;
-    margin-bottom: 3%;
+    padding-bottom:5px;
   }
   p{
     font-size: .9em;
@@ -266,11 +267,36 @@ header{
 
 .person{
   border-bottom: 2px solid $blue;
-
 }
 .paul_roof{
   border-bottom:none;
 }
+
+@include breakpoint($large){
+  .speakers{
+    @include clearfix;
+  }
+
+  .speaker_left{
+    float: left;
+    width: 45%;
+  }
+
+  .speaker_right{
+    float: right;
+    width: 45%;
+  }
+
+  .person{
+    border-bottom:none;
+  }
+
+
+
+}
+
+
+
 
 .special_performance{
   padding-top:2%;
@@ -278,13 +304,18 @@ header{
   margin-bottom:5%;
   padding-bottom:5%;
 
+  h1{
+    width: 90%; 
+    margin: 0 auto;
+  }
+
   p{
     width: 90%;
     margin: 0 auto;
   }
 
   .img_container{
-    width: 60%;
+    width: 45%;
     margin: 0 auto;
 
     img{
@@ -305,7 +336,6 @@ header{
       font-size: 1.1em;
     }
   }
-
   h4{
     margin-top:8%;
     font-size: 1.2em;
@@ -316,6 +346,29 @@ header{
     margin-top: 2%;
   }
 
+  @include clearfix;
+  @include breakpoint($large){
+
+    .img_container{
+      float: left;
+      width: 25%;
+      padding-left:5%;
+      margin-top: 10px;
+    }
+    .moldover_about{
+      float: right;
+      width: 70%;
+
+      h4, h5{
+        text-align: left;
+        margin-left: 5%;
+
+        h4{
+          margin-top: 3%;
+        }
+      }
+    }
+  }
 }
 
 .schedule_home{
@@ -324,29 +377,17 @@ header{
   @include clearfix;
 
   p{
-    float: left;
-    width: 50%;
     margin: 0 auto;
     margin-bottom: 3%;
     font-size: .9em;
   }
 
-  .img_container{
-    width: 45%;
-    float: right;
-    img{
-      width: 100%;
-    }
-  }
-
   .schedule_button{
-    clear: both;
     width: 55%;
     margin: 0 auto;
     margin-top: 3%;
 
     a{
-      
       display: block;
       border: 2px solid $blue;
       border-radius:10px;
@@ -354,13 +395,19 @@ header{
       text-decoration: none;
       color: $blue;
       padding:15px;
-      margin: 0 auto;
+      margin: 0 auto; 
+    }
+    
+    @include breakpoint($large){
+      width: 25%;
 
-      //  @include breakpoint($large){
-      //    &:hover{
-      //     color:white;
-      //   }
-      // }
+      a{ &:hover{
+          color:white;
+          background:$blue;
+          border-radius:10px;
+        }
+      }
+
     }
   }
 }
@@ -369,21 +416,27 @@ header{
   background: $ltgraybg;
   padding:1%;
   margin-top: 5%;
+  width: 100%;
 }
 
 .location{
 
   @include clearfix;
 
-  .lists{
-    width: 80%;
+  .location_content_container{
+    width: 90%;
     margin: 0 auto;
-    @include clearfix;
+  }
+
+  .lists{
+    width:45%;
+    margin: 0 auto;
+    float: left;
   }
 
   ul{
     list-style: none;
-    padding:0;
+    padding:10px 0;
     margin: 0 auto;
     font-size: .8em;
 
@@ -392,36 +445,30 @@ header{
     }
   }
 
-  .bank_building{
-    width:40%;
-    margin-left: 10%;
-    float:left;
-  }
-
-  .mill{
-    width: 40%;
+  .img_container{
     float: right;
-    margin-left: 10%;
-  
+    width: 50%;
+
+    img{
+      width: 100%;
+    }
   }
 }
 
 .register_now{
   width: 90%;
   margin: 0 auto;
-  @include clearfix;
-
-  p{
-    float: left;
-    width: 60%;
-  }
 
   .button{
-    float: right;
-    width: 35%;
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 3%;
 
+    @include breakpoint($large){
+      width: 25%;
+    }
+      
     a{
-      width: 70%;
       display: block;
       border: 2px solid $blue;
       border-radius:10px;
@@ -429,6 +476,7 @@ header{
       text-decoration: none;
       color: $blue;
       padding:15px;
+      margin: 0 auto;
 
       @include breakpoint($large){
          &:hover{
@@ -441,9 +489,17 @@ header{
 
 .sponsors{
   @include clearfix;
+  margin-bottom: 10px;
+
+  h1{
+    width: 90%; 
+    margin: 0 auto;
+    margin-top: 10px;
+  }
 }
 .sponsors_left{
-  width: 50%;
+  width: 45%;
+  margin-left: 5%;
   float: left;
   margin-bottom: 10px;
 
@@ -458,7 +514,8 @@ header{
 }
 
 .sponsors_right{
-  width: 50%;
+  width: 45%;
+  margin-right: 5%;
   float: right;
   margin-bottom: 10px;
 
@@ -483,7 +540,7 @@ header{
   padding-top:1px;
   p{
     clear:both;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     font-size: .7em;
 
@@ -498,6 +555,10 @@ header{
 
 .presentation{
   @include clearfix;
+  h1{
+    width: 90%; 
+    margin: 0 auto;
+  }
   .img_container{
     width: 49%;
     vertical-align: middle;
@@ -553,15 +614,15 @@ footer{
 }
 
 .social_media{
-  width: 20%;
+  width: 10%;
   float: right;
   padding-top:10px;
   
 
   .img_container{
-    width: 30%;
+    width: 15%;
     display: inline-block;
-    margin-left:10%;
+    margin-left:2%;
 
     img{
       width: 100%;
@@ -594,7 +655,271 @@ footer{
     text-decoration: none;
     color:white;
     text-align: center;
-    font-size: .9em;
+    font-size: .7em;
   }
   padding-bottom:10px;
 }
+
+
+
+
+//SCHEDULE
+
+body{
+  @include clearfix;
+}
+
+.subpage{
+  background: url(../img/headerbg.png) no-repeat 0 0;
+  background-size: cover;
+  padding-bottom:10px;
+  padding-top:10px;
+  margin-bottom: 0;
+  @include clearfix;
+
+  div{
+    vertical-align: middle;
+  }
+
+  .sub_logo{
+    width: 25%;
+    float: left;
+    text-align: center;
+    .logo{
+      width: 100%;
+      a{
+        display: block;
+      }
+    }
+
+    .date{
+      width: 100%;
+
+      p{
+        font-size: .6em;
+        // text-align: center;
+        margin-bottom: 0px;
+        margin-top: 0;
+        color:#c1c1c1;
+      }
+    }
+
+    img{
+      width: 35%;
+      // margin-left: 25%;
+      // margin-right: 25%;
+    }
+  }
+
+  .sub_nav{
+    float:right;
+    width: 70%;
+    text-align: right;
+    margin-right: 3%;
+    a{
+      display: inline-block;
+      font-family: $aFont;
+      color:$blue;
+      text-decoration: none;
+      padding-right:10px;
+      margin-top: 10%;
+      font-weight: lighter;
+      font-size: .8em;
+
+
+      @include breakpoint($large){
+        font-size: 1em;
+        
+      }
+    }
+
+
+  }
+
+
+}
+
+.page_heading{
+  text-align: center;
+
+  h1{
+    font-family: $hFont;
+    font-weight: lighter;
+    padding:0;
+    margin: 0;
+    color:$blue;
+    margin-top: 10px;
+  }
+
+  p{
+    font-family: $aFont;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: .8em;
+
+    a{
+      display: inline-block;
+      color:white;
+      font-weight: lighter;
+      
+    }
+  }
+}
+
+.tables_container{
+  width: 90%;
+  margin: 0 auto;
+
+  table, th, td{
+    border-collapse: collapse;
+    border: 2px solid $blue;
+    font-family: $aFont;
+    font-weight: lighter;
+    font-size: .9em;
+  }
+
+  th{
+    background: $blue;
+    text-align: left;
+    padding-left:10px;
+
+
+    h1{
+      font-family: $hFont;
+      font-weight: lighter;
+      font-size: 1.7em;
+      text-align: left;
+      color:$yellow;
+      margin: 0;
+      padding:0;
+    }
+    p{
+      padding:0;
+      margin: 0;
+      font-size: .8em;
+      font-weight: lighter;
+    }
+  }
+}
+
+table{
+  margin-top: 5%;
+  background: $ltgraybg;
+
+  .time{
+    width: 20%;
+    font-family: $hFont;
+    font-weight:300;
+    font-size: 1.2em;
+    text-align: center;
+    
+    // @include breakpoint ($large){
+    //   font-size:1.4em;
+    // }
+
+  }
+
+  h3{
+    font-family: $aFont;
+    font-weight: 300;
+    color:$yellow;
+  }
+
+  td{
+    padding:5px 2%;
+  }
+}
+
+
+
+.jump_to{
+  width: 20%;
+  padding-top: 5px;
+  margin: 0 auto;
+  margin-right:5%;
+  // float: right;
+  // background:$ltgraybg;
+  margin-bottom: 10px;
+
+  p{
+    margin:0;
+    padding:0;
+    font-size: .8em;
+
+  }
+
+  a{
+    
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    font-family: $aFont;
+    padding: 5px 10px;
+    border: 1px solid $blue;
+    border-radius:5px;
+    @include breakpoint($large){
+        &:hover{
+          background:$blue;
+          border-radius:5px;
+        }
+        
+      }
+
+
+    
+ 
+  }
+
+}
+
+
+
+//REGISTRATION
+
+.register_form{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.your_info{
+  width: 100%;
+  margin: 10%;
+}
+
+.your_info{
+  label{
+    width: 100%;
+  }
+
+  input{
+    width: 100%;
+    padding: 5px 0;
+    -webkit-appearance: none;
+    border: 1px solid $blue;
+  }
+}
+
+.tix_register{
+  text-align: right;
+  h1{
+    font-family: $hFont;
+    font-weight: lighter;
+    color:$yellow;
+  }
+  input{
+    -webkit-appearance: none;
+    padding: 10px 30px;
+    background:none;
+    border: 3px solid $blue;
+    border-radius: 5px;
+    color:$blue;
+    font-family: $aFont;
+
+  }
+}
+
+
+
+
